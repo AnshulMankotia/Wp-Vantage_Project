@@ -1,0 +1,176 @@
+:root{
+    --primary-clr:#6E3BB0;
+    --description-txt-clr:#7D7D7D;
+    --subheading-txt-clr:#5F5959;
+    --black-clr:#000000;
+    --off-black-clr:#2D2D2D;
+    --para-clr:#525252;
+    --white-clr:#ffffff;
+    --gradient:linear-gradient(273.09deg, #0066FF 6.9%, rgba(112, 68, 206, 0.936844) 49.17%, rgba(255, 0, 107, 0.81) 119.74%, rgba(255, 0, 107, 0) 148.11%);
+    --graph-gradient:linear-gradient(200.08deg, rgba(44, 79, 193, 0.99) -15.24%, rgba(129, 44, 198, 0.6) 50.5%, rgba(255, 255, 255, 0) 106.49%);
+    --primary-font-family:'DM Sans', sans-serif;
+    --secondary-font-family:'DM Serif Text', serif;
+}
+*,
+*::before,
+*::after{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Global css */
+.container{
+    max-width: 1440px;
+    margin-inline: auto;
+    width: 100%;
+    padding: 0 1rem;
+}
+a{
+    text-decoration: none;
+    color: var(--black-clr);
+}
+li{
+    list-style: none;
+}
+body{
+    font-family:var(--primary-font-family);
+}
+h1{
+    font-size: 4rem;
+    line-height:1.215em;
+}
+h2{
+    font-size:2.5rem;
+    line-height:1.32em;
+}
+img{
+    display: block;
+    width: 100%;
+}
+
+/*  */
+.grid-row{
+    display: grid;
+}
+.flex-row{
+    display: flex;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+/*  */
+
+
+/* ----------Global Button styling------------ */
+.btn-1{
+    font-size: 0.875rem;
+    color: var(--white-clr);
+    background: var(--black-clr);
+    border: none;
+    outline: none;
+    padding:1.125em 2em ;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0px 1px 2px rgba(20, 14, 62, 0.25), inset 0px 0px 0px 1px #000000, inset 0px 1px 1px 1px rgba(255, 255, 255, 0.25), inset 0px -1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+.btn-1 > span:nth-of-type(2) img{
+width:10px;
+}
+.btn-1:hover{
+    opacity: 0.7;
+}
+/* --------//Global Button styling----------- */
+
+/*------------- Header css starts----------------- */
+header{
+    background-image: url("/Assets/headerVectorYellow.svg");
+    min-height: 85vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 100%;
+}
+header a{
+font-size: 1rem;
+} 
+header .container{
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+}
+header .logo{
+    display: flex;
+    gap: 0.5rem;
+    width: 20%;
+}
+header nav{
+    width: 60%;
+}
+header nav .navLinks{
+display: flex;
+justify-content: center;
+gap: 3rem;
+}
+header .logIn-1{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/*------------ heroSection css----------- */
+.heroSection{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 57vh;
+}
+.heroSection .logIn-2{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroSection .mainHeading h1{
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
+    color: var(--off-black-clr);
+    margin-bottom: 1.5rem;
+}
+.heroSection .mainHeading h1>span{
+    background: var(--gradient);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.heroSection .mainHeading p{
+    color: var(--para-clr);
+    font-size: 1.25rem;
+    line-height: 1.675rem;
+}
+.heroSection .learnMore #btn-2{
+    background: transparent;
+    color: var(--black-clr);
+}
+.heroSection .learnMore #btn-2 .white-arrow{
+    display: none;
+}
+.heroSection .learnMore #btn-2:hover{
+    background-color: var(--black-clr);
+    color: var(--white-clr);
+    opacity: 1;
+}
+.heroSection .learnMore #btn-2:hover .black-arrow{
+    display: none;
+}
+.heroSection .learnMore #btn-2:hover .white-arrow{
+    display: block;
+}
+/* ------------//heroSection css--------- */
+/*------------- Header css ends----------------- */
