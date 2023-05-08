@@ -1,176 +1,908 @@
-:root{
-    --primary-clr:#6E3BB0;
-    --description-txt-clr:#7D7D7D;
-    --subheading-txt-clr:#5F5959;
-    --black-clr:#000000;
-    --off-black-clr:#2D2D2D;
-    --para-clr:#525252;
-    --white-clr:#ffffff;
-    --gradient:linear-gradient(273.09deg, #0066FF 6.9%, rgba(112, 68, 206, 0.936844) 49.17%, rgba(255, 0, 107, 0.81) 119.74%, rgba(255, 0, 107, 0) 148.11%);
-    --graph-gradient:linear-gradient(200.08deg, rgba(44, 79, 193, 0.99) -15.24%, rgba(129, 44, 198, 0.6) 50.5%, rgba(255, 255, 255, 0) 106.49%);
-    --primary-font-family:'DM Sans', sans-serif;
-    --secondary-font-family:'DM Serif Text', serif;
+:root {
+  --primary-clr: #6e3bb0;
+  --bg-clr-yellow: #ffc700;
+  --description-txt-clr: #7d7d7d;
+  --subheading-txt-clr: #5f5959;
+  --black-clr: #000000;
+  --off-black-clr: #2d2d2d;
+  --off-black-clr2: #4b4b4b;
+  --para-clr: #525252;
+  --white-clr: #ffffff;
+  --gradient: linear-gradient(
+    273.09deg,
+    #0066ff 6.9%,
+    rgba(112, 68, 206, 0.936844) 49.17%,
+    rgba(255, 0, 107, 0.81) 119.74%,
+    rgba(255, 0, 107, 0) 148.11%
+  );
+  --graph-gradient: linear-gradient(
+    200.08deg,
+    rgba(44, 79, 193, 0.99) -15.24%,
+    rgba(129, 44, 198, 0.6) 50.5%,
+    rgba(255, 255, 255, 0) 106.49%
+  );
+  --primary-font-family: "DM Sans", sans-serif;
+  --secondary-font-family: "DM Serif Text", serif;
+  --spacer-section: 5rem;
+  --spacer-section-2: 10rem;
+  --border-radius:10px;
 }
 *,
 *::before,
-*::after{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
 }
 
 /* Global css */
-.container{
-    max-width: 1440px;
-    margin-inline: auto;
-    width: 100%;
-    padding: 0 1rem;
+.container {
+  max-width: 1440px;
+  margin-inline: auto;
+  width: 100%;
+  padding: 0 1rem;
 }
-a{
-    text-decoration: none;
-    color: var(--black-clr);
+a {
+  text-decoration: none;
+  color: var(--black-clr);
 }
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
-body{
-    font-family:var(--primary-font-family);
+body {
+  font-family: var(--primary-font-family);
 }
-h1{
-    font-size: 4rem;
-    line-height:1.215em;
+h1 {
+  font-size: 4rem;
+  line-height: 1.215em;
+  color: var(--off-black-clr);
 }
-h2{
-    font-size:2.5rem;
-    line-height:1.32em;
-}
-img{
-    display: block;
-    width: 100%;
+img {
+  display: block;
+  width: 100%;
 }
 
 /*  */
-.grid-row{
-    display: grid;
+.grid-row {
+  display: grid;
 }
-.flex-row{
-    display: flex;
+.flex-row {
+  display: flex;
 }
-.flex-column{
-    display: flex;
-    flex-direction: column;
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
 /*  */
 
+/* -----------GLOBALY USED COMPONENTS------------- */
 
 /* ----------Global Button styling------------ */
-.btn-1{
-    font-size: 0.875rem;
-    color: var(--white-clr);
-    background: var(--black-clr);
-    border: none;
-    outline: none;
-    padding:1.125em 2em ;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-    box-shadow: 0px 1px 2px rgba(20, 14, 62, 0.25), inset 0px 0px 0px 1px #000000, inset 0px 1px 1px 1px rgba(255, 255, 255, 0.25), inset 0px -1px 1px 1px rgba(0, 0, 0, 0.25);
+.btn-1 {
+  font-size: 0.875rem;
+  color: var(--white-clr);
+  background: var(--black-clr);
+  border: none;
+  outline: none;
+  padding: 1.125em 2em;
+  border-radius:  var(--border-radius);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0px 1px 2px rgba(20, 14, 62, 0.25), inset 0px 0px 0px 1px #000000,
+    inset 0px 1px 1px 1px rgba(255, 255, 255, 0.25),
+    inset 0px -1px 1px 1px rgba(0, 0, 0, 0.25);
 }
-.btn-1 > span:nth-of-type(2) img{
-width:10px;
+.btn-1 > span:nth-of-type(2) img {
+  width: 10px;
 }
-.btn-1:hover{
-    opacity: 0.7;
+.btn-1:hover {
+  opacity: 0.7;
+}
+.btn-1:hover span:nth-of-type(2) img {
+  transform: translateX(15%);
 }
 /* --------//Global Button styling----------- */
 
+/* --------//Global CARD styling----------- */
+.card {
+  position: relative;
+  z-index:1;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius:  var(--border-radius);
+  padding: 1px;
+  background: linear-gradient(to left, #0066ff, #7044ce, #ff006b, #ff006b);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  /* z index is given because this before element overlays 
+  the main div and hover is not working */
+}
+/* --------//Global CARD styling----------- */
+
+/* -----------GLOBALY USED COMPONENTS------------- */
 /*------------- Header css starts----------------- */
-header{
-    background-image: url("/Assets/headerVectorYellow.svg");
-    min-height: 85vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: 100%;
+header {
+  background-image: url("/Assets/headerVectorYellow.svg");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 150%;
+  overflow: hidden;
+  margin-bottom: var(--spacer-section);
 }
-header a{
-font-size: 1rem;
-} 
-header .container{
-    justify-content: space-between;
-    align-items: center;
-    padding: 3rem 0;
+.mobile-menu {
+  display: none;
 }
-header .logo{
-    display: flex;
-    gap: 0.5rem;
-    width: 20%;
+header a {
+  font-size: 1rem;
 }
-header nav{
-    width: 60%;
+.navLinks a:hover {
+  background: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
-header nav .navLinks{
-display: flex;
-justify-content: center;
-gap: 3rem;
+header .container {
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 1rem;
 }
-header .logIn-1{
-    width: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+.logo {
+  display: flex;
+  gap: 0.5rem;
+  width: 20%;
+}
+header nav {
+  width: 60%;
+}
+.navLinks {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+header .logIn-1 {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+header .logIn-1 a:first-child:hover{
+  background: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 /*------------ heroSection css----------- */
-.heroSection{
-    text-align: center;
+.heroSection {
+  text-align: center;
     display: flex;
     flex-direction: column;
+    /* gap: 5rem; */
     justify-content: space-around;
-    height: 57vh;
+    padding: 0 1rem;
+    min-height: 60vh;
 }
-.heroSection .logIn-2{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
+.heroSection .logIn-2 {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.heroSection .mainHeading h1{
-    font-family: var(--secondary-font-family);
-    font-weight: 400;
-    color: var(--off-black-clr);
-    margin-bottom: 1.5rem;
+.heroSection .mainHeading h1 {
+  font-family: var(--secondary-font-family);
+  font-weight: 400;
+  margin-bottom: 1.5rem;
 }
-.heroSection .mainHeading h1>span{
-    background: var(--gradient);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+.heroSection .mainHeading h1 > span {
+  background: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
-.heroSection .mainHeading p{
-    color: var(--para-clr);
-    font-size: 1.25rem;
-    line-height: 1.675rem;
+.heroSection .mainHeading p {
+  color: var(--para-clr);
+  font-size: 1.25rem;
+  line-height: 1.675rem;
 }
-.heroSection .learnMore #btn-2{
-    background: transparent;
-    color: var(--black-clr);
+.heroSection .learnMore #btn-2 {
+  background: transparent;
+  color: var(--black-clr);
 }
-.heroSection .learnMore #btn-2 .white-arrow{
-    display: none;
+.heroSection .learnMore #btn-2 .white-arrow {
+  display: none;
 }
-.heroSection .learnMore #btn-2:hover{
-    background-color: var(--black-clr);
-    color: var(--white-clr);
-    opacity: 1;
+.heroSection .learnMore #btn-2:hover {
+  background-color: var(--black-clr);
+  color: var(--white-clr);
+  opacity: 1;
 }
-.heroSection .learnMore #btn-2:hover .black-arrow{
-    display: none;
+.heroSection .learnMore #btn-2:hover .black-arrow {
+  display: none;
 }
-.heroSection .learnMore #btn-2:hover .white-arrow{
-    display: block;
+.heroSection .learnMore #btn-2:hover .white-arrow {
+  display: block;
 }
 /* ------------//heroSection css--------- */
 /*------------- Header css ends----------------- */
+
+/* ------------------Section1 css starts -----------*/
+.section1 {
+  margin-bottom: 2rem;
+}
+.section1 .column {
+  justify-content: space-between;
+  gap: 4rem;
+}
+.section1 .column .columns:nth-of-type(1) {
+  text-align: center;
+}
+.section1 .columns:nth-of-type(1) h1 {
+  font-size: 3.125rem;
+  font-family: var(--secondary-font-family);
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+.section1 .columns:nth-of-type(1) p {
+  color: var(--para-clr);
+  font-size: 1.25rem;
+  line-height: 1.675rem;
+  margin-bottom: 2rem;
+}
+.section1 .columns:nth-of-type(1) h1 span {
+  background: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.section1 .columns:nth-of-type(1) h2 {
+  position: relative;
+  display: inline-block;
+  font-family: var(--secondary-font-family);
+  font-weight: 400;
+  font-size: 3.125rem;
+  color: var(--off-black-clr);
+}
+.section1 .columns:nth-of-type(1) h2 > span {
+  position: absolute;
+  top: 120%;
+  left: 0%;
+  width: 100%;
+}
+.section1 .columns:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.section1 .columns:nth-of-type(2) .card {
+  flex: 1;
+  height: 30rem;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background-color: white;
+  box-shadow: 0px 10px 30px -20px #6e3bb0;
+  z-index: 1;
+}
+.section1 .columns:nth-of-type(2) .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius:  var(--border-radius);
+  padding: 1px;
+  background: linear-gradient(to left, #0066ff, #7044ce, #ff006b, #ff006b);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  /* z index is given because this before element overlays 
+  the main div and hover is not working */
+}
+.section1 .columns:nth-of-type(2) .card img {
+  width: 200px;
+}
+.section1 .columns:nth-of-type(2) .card h3 {
+  font-size: 1.875rem;
+  background: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.section1 .columns:nth-of-type(2) .card p {
+  font-size: 1rem;
+  color: var(--para-clr);
+  opacity: 0.8;
+}
+.section1 .columns:nth-of-type(3) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+.section1 .columns:nth-of-type(3) h3 {
+  font-size: 1.875rem;
+  color: var(--off-black-clr);
+  font-weight: 500;
+}
+.section1 .columns:nth-of-type(3) h3 span {
+  background: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+/* ------------------Section2 css starts -----------*/
+
+/* ------------------Section2 css ends -----------*/
+.section2 {
+  background-image: url("/Assets/mainVectorYellow.svg");
+  background-repeat: no-repeat;
+  margin-bottom: var(--spacer-section);
+}
+.section2 .container {
+  min-height: 120vh;
+}
+.features .percentage {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.features .percentage h3 {
+  font-size: 4rem;
+  color: var(--off-black-clr);
+}
+.features .percentage span {
+  font-size: 1rem;
+  color: var(--para-clr);
+}
+.percentage .faster {
+  text-align: center;
+}
+.section2 .container .features {
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.section2 .container .features > h1 span {
+  background: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.section2 table {
+  font-family: var(--primary-font-family);
+  background-image: linear-gradient(
+    to left,
+    #0066ff,
+    #7044ce,
+    #ff006b,
+    #ff006b
+  );
+  background-origin: border-box;
+  border-spacing: 1px;
+  border-radius:  var(--border-radius);
+  width: 100%;
+}
+.gradient-table th {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  background-color: white;
+  padding: 1.2rem 0;
+}
+.gradient-table td {
+  font-size: 0.75rem;
+  background-color: white;
+  text-align: center;
+}
+.gradient-table tr:first-child >th:nth-of-type(1){
+ border-top-left-radius: 8px;
+}
+.gradient-table tr:first-child >th:nth-of-type(4){
+ border-top-right-radius: 8px;
+}
+.gradient-table tr:last-child >th:nth-of-type(1){
+ border-bottom-left-radius: 8px;
+}
+.gradient-table tr:last-child >td:last-child{
+ border-bottom-right-radius: 8px;
+}
+/* ------------------Section-2 css ends -----------*/
+
+/* ------------------Section-3 css starts -----------*/
+.section3 {
+  margin-bottom: var(--spacer-section-2);
+}
+.section3 h2 {
+  color: var(--off-black-clr2) !important;
+}
+.section3 .columns:nth-of-type(2) {
+  gap: 1rem;
+}
+.section3 .columns:nth-of-type(1) h2 {
+  margin-bottom: 2rem;
+}
+.section3 .columns:nth-of-type(2) .card {
+  height: 23rem;
+  gap: 4rem;
+  padding: 3rem 2rem;
+}
+.section3 .columns:nth-of-type(2) .card img {
+  width: 10px;
+}
+.section3 .columns:nth-of-type(2) .card h4 {
+  font-size: 1.25rem;
+  color: var(--off-black-clr);
+}
+.section3 .columns:nth-of-type(2) .card p {
+  font-size: 0.875rem;
+}
+.section3 .columns:nth-of-type(2) .card h4 span {
+  background: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* ------------------Section-3 css ends -----------*/
+
+/* ------------------Section-4 css starts -----------*/
+.section4 {
+  margin-bottom: var(--spacer-section-2);
+}
+.section4 .testimonials h1 {
+  color: var(--off-black-clr2);
+  text-align: center;
+  font-family: var(--secondary-font-family);
+  font-weight: 400;
+  margin-bottom: var(--spacer-section);
+}
+.testimonials .columns {
+  display: flex;
+  gap: 1rem;
+}
+.testimonials .column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.testimonials .card {
+  padding: 2rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  background-color: white;
+  box-shadow: 0px 4px 107px -50px #6e3bb0;
+  z-index: 1;
+}
+.testimonials .card p {
+  color: var(--para-clr);
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+.testimonials .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius:  var(--border-radius);
+  padding: 1px;
+  background: linear-gradient(to left, #0066ff, #7044ce, #ff006b, #ff006b);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+.testimonials .stars {
+  display: flex;
+  gap: 0.5rem;
+}
+.testimonials .stars img {
+  width: 20px;
+}
+.testimonials .client img {
+  width: 50px;
+}
+.testimonials .client {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.testimonials .client-info {
+  color: var(--para-clr);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+/* ------------------Section-4 css ends -----------*/
+
+/* ------------------Section-5 css starts -----------*/
+.section5 {
+  margin-bottom: var(--spacer-section-2);
+}
+.section5 .container {
+  min-height: 120vh;
+}
+.section5 .our-plans {
+  min-height: inherit;
+}
+.section5 .our-plans {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.section5 .our-plans h1 {
+  color: var(--off-black-clr2);
+  text-align: center;
+  font-family: var(--secondary-font-family);
+  font-weight: 400;
+}
+.section5 .free-analysis .card {
+  background: #fafafa;
+  box-shadow: 0px 10px 30px -20px #6e3bb0;
+  padding: 2px 0 2rem;
+}
+.section5 .card h3 {
+  color: var(--white-clr);
+  font-family: var(--secondary-font-family);
+  font-size: 2.25rem;
+  text-align: center;
+  padding: 1rem 0rem;
+  background: var(--gradient);
+  font-weight: 400;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  width: 100%;
+}
+.section5 .free-analysis .card p {
+  color: var(--para-clr);
+  font-size: 1rem;
+  text-align: center;
+  padding: 3rem 2rem 4rem;
+}
+.section5 .free-analysis .input-url {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.section5 .free-analysis .input-url input {
+  padding: 1.125em 6em;
+  border-radius:  var(--border-radius);
+  outline: none;
+  width: 25rem;
+  border: 1px solid #4b4b4b;
+  background: #fdfcff;
+}
+.section5 .select-plans {
+  display: flex;
+  gap: 2rem;
+}
+.section5 .select-plans .card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  padding: 0 0 2rem;
+}
+.section5 .select-plans h1 {
+  background: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.section5 .plan-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.section5 .plan-specs .notInPlan {
+  opacity: 0.3;
+}
+/* ------------------Section-5 css ends -----------*/
+
+/* ------------------Section-6 css starts -----------*/
+.section6 {
+  margin-bottom: var(--spacer-section-2);
+}
+.section6 .faq {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.section6 .faq .f-left {
+  width: 37%;
+}
+.section6 .faq .f-right {
+  width: 53%;
+}
+.section6 .faq .f-left h1 {
+  font-family: var(--secondary-font-family);
+  padding-bottom: 3rem;
+  font-weight: 400;
+  background: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.section6 .faq .f-left p {
+  color: var(--para-clr);
+}
+.section6 .accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.section6 .accordion .tab {
+  border: 1px solid #505050;
+  padding: 1rem 2rem 3rem 4rem;
+  border-radius:  var(--border-radius);
+  color: var(--para-clr);
+  opacity: 0.8;
+  overflow: hidden;
+  max-height: 0;
+  cursor: pointer;
+  transition: max-height 0.5s cubic-bezier(0.5, 1, 0.5, 1);
+}
+.section6 .accordion h3 {
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+    color: black;
+    font-weight: 500;
+}
+.section6 .accordion h3 > i {
+  font-size: 2rem;
+  font-weight: lighter;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+.section6 .accordion .tab.active {
+  max-height: 500px;
+}
+.section6 .accordion .tab.active i {
+  transform: rotate(45deg);
+}
+/* ------------------Section-6 css ends -----------*/
+
+/* ------------------Section-7 css starts -----------*/
+.section7 {
+  background-color: var(--bg-clr-yellow);
+  margin-bottom: var(--spacer-section);
+}
+.section7 .container {
+  min-height: 70vh;
+}
+.section7 .fix {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: inherit;
+}
+.section7 .fix .fix-left h2 {
+  font-size: 3rem;
+  color: var(--white-clr);
+  font-family: var(--secondary-font-family);
+  font-weight: 400;
+}
+.section7 .fix .fix-left h2 span {
+  background: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.section7 .fix .fix-left {
+  width: 45%;
+}
+.section7 .fix .fix-left p {
+  color: var(--white-clr);
+  font-size: 1.125rem;
+  padding: 4rem 0;
+  letter-spacing: 0.07em;
+}
+.section7 .fix .fix-right {
+  width: 45%;
+}
+.section7 .btn-1 {
+  padding: 1.125em 4em;
+  font-size: 1.125rem;
+}
+/* ------------------Section-7 css ends -----------*/
+
+/* ------------------Section-8 css starts -----------*/
+.section8{
+  margin-bottom: var(--spacer-section);
+}
+.section8 .fix-request h2 {
+  font-size: 2.5rem;
+  background: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-family: var(--secondary-font-family);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+  line-height: 70px;
+}
+.section8 .fix-request{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.section8 .fix-request h2 > hr {
+  width: 78%;
+  border: 0;
+  height: 1px;
+  background: var(--gradient);
+}
+.section8 .fix-request p{
+  font-size: 1.125rem;
+  color: var(--para-clr);
+}
+
+.section8 .grid-row{
+  grid-template-columns: repeat(2,1fr);
+  row-gap: 1rem;
+  column-gap: 4rem;
+}
+.section8 .grid-row .card{
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  background: #fafafa;
+  transition:background,color .3s ease;
+  color: var(--off-black-clr);
+}
+.section8 .grid-row .card:hover{
+  background: var(--gradient);
+  border-radius:  var(--border-radius);
+  color: var(--white-clr);
+}
+.section8 .addInfo input{
+  margin-bottom: 1rem;
+  display: block;
+}
+.section8 .addInfo .card{
+  background: #fafafa;
+}
+.section8 .addInfo input,textarea{
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 1.5rem;
+  font-size: 1rem;
+  width: 99%;
+}
+.section8 .btn-1{
+  padding: 1.125em 4em;
+}
+.section8 #card5{
+  padding: 0;
+}
+.section8 #card5:hover{
+  background: #fafafa;
+}
+.section8 #card5 select{
+  border: none;
+  cursor: pointer;
+outline: none;
+width: 100%;
+height: 100%;
+background-color: transparent;
+font-size: 1rem;
+text-align: center;
+color: #2d2d2d;
+}
+/* ------------------Section-8 css ends -----------*/
+
+
+
+
+/* ------------------Footer css starts -----------*/
+footer{
+  background-image: url("/Assets/footerVectorYellow.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer .container{
+  min-height: 80vh;
+}
+.footLinks{
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content:end;
+  gap: 4rem;
+  padding-bottom: 3rem;
+}
+footer .wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footLinks .logo {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+.footLinks .foot-left{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 9rem;
+
+}
+.footLinks .social i{
+  color: white;
+  background: var(--gradient);
+  font-size: 1.5rem;
+  border-radius:  var(--border-radius);
+  padding: 1rem;
+  width: 4rem;
+  text-align: center;
+  cursor: pointer;
+}
+footer .social{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+/* .footLinks .social i:hover{
+  background: var(--white-clr);
+  background: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+} */
+
+.footLinks hr{
+  width: 100%;
+    border: 0;
+    height: 1px;
+    background: var(--gradient);
+    display: block;
+}
+
+footer .terms-conditions{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .terms-conditions .c-left a:hover{
+  background: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.terms-conditions .c-left ul{
+display: flex;
+gap: 2rem;
+}
+.terms-conditions .c-right span{
+  padding-right: 2rem;
+}
+.terms-conditions .c-right i{
+  color: white;
+    background: var(--gradient);
+    font-size: 2rem;
+    border-radius:  var(--border-radius);
+    padding: 1rem;
+    width: 4rem;
+    text-align: center;
+    cursor: pointer;
+}
+/* ------------------Footer css ends -----------*/
+
+
