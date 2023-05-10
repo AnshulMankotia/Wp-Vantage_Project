@@ -358,7 +358,6 @@
     .section8 .addInfo input, textarea {
         font-size: 13px;
     }
-    }
     /* For section-8 */
 
     /* footer css starts */
@@ -405,6 +404,8 @@
         gap: 2rem;
     }
     /* footer css starts */
-}
+    }
+
+    
 
 

@@ -25,7 +25,7 @@
   --secondary-font-family: "DM Serif Text", serif;
   --spacer-section: 5rem;
   --spacer-section-2: 10rem;
-  --border-radius:10px;
+  --border-radius: 10px;
 }
 *,
 *::before,
@@ -34,7 +34,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -88,7 +88,7 @@ img {
   border: none;
   outline: none;
   padding: 1.125em 2em;
-  border-radius:  var(--border-radius);
+  border-radius: var(--border-radius);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -111,13 +111,13 @@ img {
 /* --------//Global CARD styling----------- */
 .card {
   position: relative;
-  z-index:1;
+  z-index: 1;
 }
 .card::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius:  var(--border-radius);
+  border-radius: var(--border-radius);
   padding: 1px;
   background: linear-gradient(to left, #0066ff, #7044ce, #ff006b, #ff006b);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -176,7 +176,7 @@ header .logIn-1 {
   justify-content: center;
   gap: 1rem;
 }
-header .logIn-1 a:first-child:hover{
+header .logIn-1 a:first-child:hover {
   background: var(--gradient);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -185,12 +185,12 @@ header .logIn-1 a:first-child:hover{
 /*------------ heroSection css----------- */
 .heroSection {
   text-align: center;
-    display: flex;
-    flex-direction: column;
-    /* gap: 5rem; */
-    justify-content: space-around;
-    padding: 0 1rem;
-    min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  /* gap: 5rem; */
+  justify-content: space-around;
+  padding: 0 1rem;
+  min-height: 60vh;
 }
 .heroSection .logIn-2 {
   display: flex;
@@ -300,7 +300,7 @@ header .logIn-1 a:first-child:hover{
   content: "";
   position: absolute;
   inset: 0;
-  border-radius:  var(--border-radius);
+  border-radius: var(--border-radius);
   padding: 1px;
   background: linear-gradient(to left, #0066ff, #7044ce, #ff006b, #ff006b);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -314,6 +314,8 @@ header .logIn-1 a:first-child:hover{
   width: 200px;
 }
 .section1 .columns:nth-of-type(2) .card h3 {
+  font-family: var(--secondary-font-family);
+  font-weight: 400;
   font-size: 1.875rem;
   background: var(--gradient);
   -webkit-text-fill-color: transparent;
@@ -392,7 +394,7 @@ header .logIn-1 a:first-child:hover{
   );
   background-origin: border-box;
   border-spacing: 1px;
-  border-radius:  var(--border-radius);
+  border-radius: var(--border-radius);
   width: 100%;
 }
 .gradient-table th {
@@ -406,17 +408,17 @@ header .logIn-1 a:first-child:hover{
   background-color: white;
   text-align: center;
 }
-.gradient-table tr:first-child >th:nth-of-type(1){
- border-top-left-radius: 8px;
+.gradient-table tr:first-child > th:nth-of-type(1) {
+  border-top-left-radius: 8px;
 }
-.gradient-table tr:first-child >th:nth-of-type(4){
- border-top-right-radius: 8px;
+.gradient-table tr:first-child > th:nth-of-type(4) {
+  border-top-right-radius: 8px;
 }
-.gradient-table tr:last-child >th:nth-of-type(1){
- border-bottom-left-radius: 8px;
+.gradient-table tr:last-child > th:nth-of-type(1) {
+  border-bottom-left-radius: 8px;
 }
-.gradient-table tr:last-child >td:last-child{
- border-bottom-right-radius: 8px;
+.gradient-table tr:last-child > td:last-child {
+  border-bottom-right-radius: 8px;
 }
 /* ------------------Section-2 css ends -----------*/
 
@@ -495,7 +497,7 @@ header .logIn-1 a:first-child:hover{
   content: "";
   position: absolute;
   inset: 0;
-  border-radius:  var(--border-radius);
+  border-radius: var(--border-radius);
   padding: 1px;
   background: linear-gradient(to left, #0066ff, #7044ce, #ff006b, #ff006b);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -578,7 +580,7 @@ header .logIn-1 a:first-child:hover{
 }
 .section5 .free-analysis .input-url input {
   padding: 1.125em 6em;
-  border-radius:  var(--border-radius);
+  border-radius: var(--border-radius);
   outline: none;
   width: 25rem;
   border: 1px solid #4b4b4b;
@@ -646,21 +648,21 @@ header .logIn-1 a:first-child:hover{
 .section6 .accordion .tab {
   border: 1px solid #505050;
   padding: 1rem 2rem 3rem 4rem;
-  border-radius:  var(--border-radius);
+  border-radius: var(--border-radius);
   color: var(--para-clr);
   opacity: 0.8;
   overflow: hidden;
   max-height: 0;
   cursor: pointer;
-  transition: max-height 0.5s cubic-bezier(0.5, 1, 0.5, 1);
+  transition: max-height 0.3s ease-out;
 }
 .section6 .accordion h3 {
   padding-bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-    color: black;
-    font-weight: 500;
+  color: black;
+  font-weight: 500;
 }
 .section6 .accordion h3 > i {
   font-size: 2rem;
@@ -670,6 +672,7 @@ header .logIn-1 a:first-child:hover{
 }
 .section6 .accordion .tab.active {
   max-height: 500px;
+  transition: max-height 0.5s ease-out;
 }
 .section6 .accordion .tab.active i {
   transform: rotate(45deg);
@@ -692,7 +695,7 @@ header .logIn-1 a:first-child:hover{
 }
 .section7 .fix .fix-left h2 {
   font-size: 3rem;
-  color: var(--white-clr);
+  color: var(--black-clr);
   font-family: var(--secondary-font-family);
   font-weight: 400;
 }
@@ -705,7 +708,7 @@ header .logIn-1 a:first-child:hover{
   width: 45%;
 }
 .section7 .fix .fix-left p {
-  color: var(--white-clr);
+  color: var(--black-clr);
   font-size: 1.125rem;
   padding: 4rem 0;
   letter-spacing: 0.07em;
@@ -720,7 +723,7 @@ header .logIn-1 a:first-child:hover{
 /* ------------------Section-7 css ends -----------*/
 
 /* ------------------Section-8 css starts -----------*/
-.section8{
+.section8 {
   margin-bottom: var(--spacer-section);
 }
 .section8 .fix-request h2 {
@@ -738,7 +741,7 @@ header .logIn-1 a:first-child:hover{
   gap: 2rem;
   line-height: 70px;
 }
-.section8 .fix-request{
+.section8 .fix-request {
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -749,37 +752,38 @@ header .logIn-1 a:first-child:hover{
   height: 1px;
   background: var(--gradient);
 }
-.section8 .fix-request p{
+.section8 .fix-request p {
   font-size: 1.125rem;
   color: var(--para-clr);
 }
 
-.section8 .grid-row{
-  grid-template-columns: repeat(2,1fr);
+.section8 .grid-row {
+  grid-template-columns: repeat(2, 1fr);
   row-gap: 1rem;
   column-gap: 4rem;
 }
-.section8 .grid-row .card{
+.section8 .grid-row .card {
   padding: 1.5rem;
   text-align: center;
   cursor: pointer;
   background: #fafafa;
-  transition:background,color .3s ease;
+  transition: background, color 0.3s ease;
   color: var(--off-black-clr);
 }
-.section8 .grid-row .card:hover{
+.section8 .grid-row .card:hover {
   background: var(--gradient);
-  border-radius:  var(--border-radius);
+  border-radius: var(--border-radius);
   color: var(--white-clr);
 }
-.section8 .addInfo input{
+.section8 .addInfo input {
   margin-bottom: 1rem;
   display: block;
 }
-.section8 .addInfo .card{
+.section8 .addInfo .card {
   background: #fafafa;
 }
-.section8 .addInfo input,textarea{
+.section8 .addInfo input,
+textarea {
   border: none;
   outline: none;
   background: transparent;
@@ -787,49 +791,73 @@ header .logIn-1 a:first-child:hover{
   font-size: 1rem;
   width: 99%;
 }
-.section8 .btn-1{
+.section8 .btn-1 {
   padding: 1.125em 4em;
 }
-.section8 #card5{
+.section8 #card5 {
   padding: 0;
 }
-.section8 #card5:hover{
+.section8 #card5:hover {
   background: #fafafa;
 }
-.section8 #card5 select{
+.section8 #card5 select {
   border: none;
   cursor: pointer;
-outline: none;
-width: 100%;
-height: 100%;
-background-color: transparent;
-font-size: 1rem;
-text-align: center;
-color: #2d2d2d;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  font-size: 1rem;
+  text-align: center;
+  color: #2d2d2d;
+  /* to adjust dropDown arrow which is set default by browser */
+  background: url("/Assets/downArrow.svg") no-repeat;
+  background-position: right 50px center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
+
+.section8 select option:nth-of-type(1){
+  display: none;
+}
+
+.section8 select option:nth-of-type(2){
+ background-color: #c7c7c7;
+}
+.section8 select option:nth-of-type(3){
+ background-color: #d6d6d6;
+}
+.section8 select option:nth-of-type(4){
+ background-color: #e5e5e5;
+}
+.section8 select option:nth-of-type(5){
+ background-color: #eeeeee;
+}
+.section8 select option:nth-of-type(5){
+ background-color: #fafafa;
+}
+
 /* ------------------Section-8 css ends -----------*/
 
-
-
-
 /* ------------------Footer css starts -----------*/
-footer{
+footer {
   background-image: url("/Assets/footerVectorYellow.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-footer .container{
+footer .container {
   min-height: 80vh;
 }
-.footLinks{
+.footLinks {
   min-height: inherit;
   display: flex;
   flex-direction: column;
-  justify-content:end;
+  justify-content: end;
   gap: 4rem;
   padding-bottom: 3rem;
 }
-footer .wrapper{
+footer .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -839,24 +867,23 @@ footer .wrapper{
   gap: 0.5rem;
   width: 100%;
 }
-.footLinks .foot-left{
+.footLinks .foot-left {
   display: flex;
   flex-direction: column;
   gap: 4rem;
   margin-top: 9rem;
-
 }
-.footLinks .social i{
+.footLinks .social i {
   color: white;
   background: var(--gradient);
   font-size: 1.5rem;
-  border-radius:  var(--border-radius);
+  border-radius: var(--border-radius);
   padding: 1rem;
   width: 4rem;
   text-align: center;
   cursor: pointer;
 }
-footer .social{
+footer .social {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -868,41 +895,39 @@ footer .social{
   -webkit-background-clip: text;
 } */
 
-.footLinks hr{
+.footLinks hr {
   width: 100%;
-    border: 0;
-    height: 1px;
-    background: var(--gradient);
-    display: block;
+  border: 0;
+  height: 1px;
+  background: var(--gradient);
+  display: block;
 }
 
-footer .terms-conditions{
+footer .terms-conditions {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-footer .terms-conditions .c-left a:hover{
+footer .terms-conditions .c-left a:hover {
   background: var(--gradient);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
-.terms-conditions .c-left ul{
-display: flex;
-gap: 2rem;
+.terms-conditions .c-left ul {
+  display: flex;
+  gap: 2rem;
 }
-.terms-conditions .c-right span{
+.terms-conditions .c-right span {
   padding-right: 2rem;
 }
-.terms-conditions .c-right i{
+.terms-conditions .c-right i {
   color: white;
-    background: var(--gradient);
-    font-size: 2rem;
-    border-radius:  var(--border-radius);
-    padding: 1rem;
-    width: 4rem;
-    text-align: center;
-    cursor: pointer;
+  background: var(--gradient);
+  font-size: 2rem;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  width: 4rem;
+  text-align: center;
+  cursor: pointer;
 }
 /* ------------------Footer css ends -----------*/
-
-

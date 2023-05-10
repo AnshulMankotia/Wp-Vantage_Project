@@ -10,11 +10,11 @@ const accordion = document.getElementsByClassName('tab');
 for (let i = 0; i < accordion.length; i++) {
   accordion[i].addEventListener('click', function() {
     // Remove "active" class from all tabs
-    for (let j = 0; j < accordion.length; j++) {
-      if (j !== i) {
-        accordion[j].classList.remove('active');
-      }
-    }
+    // for (let j = 0; j < accordion.length; j++) {
+    //   if (j !== i) {
+    //     accordion[j].classList.remove('active');
+    //   }
+    // }
     // Toggle "active" class on the clicked tab
     this.classList.toggle('active');
   });
