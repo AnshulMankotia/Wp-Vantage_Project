@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,14 +9,26 @@
     <link rel="stylesheet" href="query.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- globally used components -->
 
     <!-- <a href="#"><button class="btn-1">
@@ -30,631 +42,764 @@
     <!-- --------------------- -->
 
     <header>
-        <div class="container flex-row">
-            <div class="logo">
-                <a href=""><img src="/Assets/logo1.svg" alt="" /></a>
-                <a href=""><img src="/Assets/logo1-1.svg" alt="" /></a>
+      <div class="container flex-row">
+        <div class="logo">
+          <a href=""><img src="/Assets/logo1.svg" alt="" /></a>
+          <a href=""><img src="/Assets/logo1-1.svg" alt="" /></a>
+        </div>
+        <nav class="deskNav">
+          <ul class="navLinks">
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ's</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+          </ul>
+        </nav>
+        <div class="logIn logIn-1" id="desk-login">
+          <a href="">Log in</a>
+          <a href=""
+            ><button class="btn-1">
+              <span>Get Started</span>
+              <span><img src="/Assets/buttonArrow.svg" alt="" /></span></button
+          ></a>
+        </div>
+        <!-- mobile-menu -->
+        <div class="mobile-menu">
+          <nav class="mobNav">
+            <div class="navIcon">
+              <span class="first-line"></span>
+              <span class="second-line"></span>
+              <span class="third-line"></span>
             </div>
-            <nav class="deskNav">
-                <ul class="navLinks">
-                    <li><a href="#about-us">About Us</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#faq">FAQ's</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                </ul>
-            </nav>
-            <div class="logIn logIn-1" id="desk-login">
-                <a href="">Log in</a>
-                <a href=""><button class="btn-1">
-                        <span>Get Started</span>
-                        <span><img src="/Assets/buttonArrow.svg" alt="" /></span></button></a>
-            </div>
-            <!-- mobile-menu -->
-            <div class="mobile-menu">
-                <nav class="mobNav">
-                    <div class="navIcon">
-                        <span class="first-line"></span>
-                        <span class="second-line"></span>
-                        <span class="third-line"></span>
-                    </div>
-                    <ul class="navLinks">
-                        <li><a href="#about-us">About Us</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#faq">FAQ's</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    </ul>
-                </nav>
-                <div class="logIn logIn-1" id="mobile-login">
-                    <a href="">Log in</a>
-                    <a href=""><button class="btn-1">
-                            <span>Get Started</span>
-                            <span><img src="/Assets/buttonArrow.svg" alt="" /></span></button></a>
-                </div>
-            </div>
-            <!-- mobile-menu -->
+            <ul class="navLinks">
+              <li class="listItems"><a href="#about-us">About Us</a></li>
+              <li class="listItems"><a href="#pricing">Pricing</a></li>
+              <li class="listItems"><a href="#faq">FAQ's</a></li>
+              <li class="listItems">
+                <a href="#testimonials">Testimonials</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="logIn logIn-1" id="mobile-login">
+            <a href="">Log in</a>
+            <a href=""
+              ><button class="btn-1">
+                <span>Get Started</span>
+                <span
+                  ><img src="/Assets/buttonArrow.svg" alt=""
+                /></span></button
+            ></a>
+          </div>
+        </div>
+        <!-- mobile-menu -->
+      </div>
+
+      <div class="heroSection">
+        <div class="mainHeading">
+          <h1>
+            Speed up your online store,<br />
+            <span>boost conversions and sales</span> with our <br />
+            optimization services
+          </h1>
+          <p>
+            Get lightning-fast load times for your WordPress site - try <br />
+            our speed optimization services now!
+          </p>
         </div>
 
-        <div class="heroSection">
-            <div class="mainHeading">
-                <h1>
-                    Speed up your online store,<br />
-                    <span>boost conversions and sales</span> with our <br />
-                    optimization services
-                </h1>
-                <p>
-                    Get lightning-fast load times for your WordPress site - try <br />
-                    our speed optimization services now!
-                </p>
-            </div>
-
-            <div class="learnMore">
-                <div class="logIn logIn-2">
-                    <a href=""><button class="btn-1">
-                            <span>Get Started</span>
-                            <span><img src="/Assets/buttonArrow.svg" alt="" /></span></button></a>
-                    <a href=""><button class="btn-1" id="btn-2">
-                            <span>Start with free analysis</span>
-                            <span class="black-arrow"><img src="/Assets/buttonArrow-Black.svg" alt="" /></span>
-                            <span class="white-arrow"><img src="/Assets/buttonArrow.svg" alt="" /></span></button></a>
-                </div>
-            </div>
+        <div class="learnMore">
+          <div class="logIn logIn-2">
+            <a href=""
+              ><button class="btn-1">
+                <span>Get Started</span>
+                <span
+                  ><img src="/Assets/buttonArrow.svg" alt=""
+                /></span></button
+            ></a>
+            <a href="#pricing"
+              ><button class="btn-1" id="btn-2">
+                <span>Start with free analysis</span>
+                <span class="black-arrow"
+                  ><img src="/Assets/buttonArrow-Black.svg" alt=""
+                /></span>
+                <span class="white-arrow"
+                  ><img src="/Assets/buttonArrow.svg" alt=""
+                /></span></button
+            ></a>
+          </div>
         </div>
+      </div>
+      <div class="overlay"></div>
     </header>
 
     <main>
-        <!----------- SECTION1 STARTS------------- -->
-        <section class="section1 about" id="about-us">
-            <div class="container">
-                <div class="column flex-column">
-                    <div class="columns">
-                        <h1>
-                            One stop <span>solution</span> for all your <br />
-                            <span>digital marketing</span> and <span>website</span> support
-                            needs
-                        </h1>
-                        <p>
-                            We'll keep your website running smoothly and looking great, so
-                            you can <br />
-                            focus on growing your business
-                        </p>
-                        <h2>
-                            Why us?
-                            <span><img src="/Assets/underlineVector.svg" alt="" /></span>
-                        </h2>
-                    </div>
-
-                    <div class="columns">
-                        <div class="card" id="card1">
-                            <img src="/Assets/illustarator1.svg" alt="" />
-                            <h3>Trusted By Many</h3>
-                            <p>
-                                Our website speed optimization services have been trusted by
-                                numerous clients to increase the performance and loading times
-                                of their websites.
-                            </p>
-                        </div>
-                        <div class="card" id="card2">
-                            <img src="/Assets/illustarator2.svg" alt="" />
-                            <h3>Serious Speed</h3>
-                            <p>
-                                With a team of highly trained and experienced professionals,
-                                we have the knowledge and skills to optimize any website for
-                                optimal speed and performance.
-                            </p>
-                        </div>
-                        <div class="card" id="card3">
-                            <img src="/Assets/illustarator3.svg" alt="" />
-                            <h3>Friendly Support</h3>
-                            <p>
-                                Have questions? Send a message to our member in the about us
-                                page. Or email your detailed query for fast responses.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="columns">
-                        <h3>
-                            Find out why so many businesses trust
-                            <span>LightningWoo</span> to protect <br />
-                            and promote their website, making it unique.
-                        </h3>
-                        <a href=""><button class="btn-1">
-                                <span>Learn More</span>
-                                <span><img src="/Assets/buttonArrow.svg" alt="" /></span></button></a>
-                    </div>
-                </div>
+      <!----------- SECTION1 STARTS------------- -->
+      <section class="section1 about" id="about-us">
+        <div class="container">
+          <div class="column flex-column">
+            <div class="columns">
+              <h1>
+                One stop <span>solution</span> for all your <br />
+                <span>digital marketing</span> and <span>website</span> support
+                needs
+              </h1>
+              <p>
+                We'll keep your website running smoothly and looking great, so
+                you can <br />
+                focus on growing your business
+              </p>
+              <h2>
+                Why us?
+                <span><img src="/Assets/underlineVector.svg" alt="" /></span>
+              </h2>
             </div>
-        </section>
-        <!----------- SECTION-1 ENDS------------- -->
 
-        <!----------- SECTION-2 STARTS------------- -->
-        <section class="section2">
-            <div class="container">
-                <div class="features">
-                    <h1>How Much <span>Faster</span> it is?</h1>
-                    <div class="percentage">
-                        <div class="faster p1">
-                            <h3>100%</h3>
-                            <span>Faster to search for an order</span>
-                        </div>
-                        <div class="faster p2">
-                            <h3>100%</h3>
-                            <span>Faster to open an order detail screen</span>
-                        </div>
-                    </div>
-                    <table class="gradient-table">
-                        <tr>
-                            <th>use case</th>
-                            <th>before</th>
-                            <th>after</th>
-                            <th>faster %</th>
-                        </tr>
-                        <tr>
-                            <th>order list screen</th>
-                            <td>24+ secs</td>
-                            <td>less than i second</td>
-                            <td>2600 %</td>
-                        </tr>
-                        <tr>
-                            <th>order detail</th>
-                            <td>32+ secs</td>
-                            <td>0.64 seconds</td>
-                            <td>4200 %</td>
-                        </tr>
-                        <tr>
-                            <th>search by email</th>
-                            <td>80+ secs</td>
-                            <td>less than 1 second</td>
-                            <td>7900 %</td>
-                        </tr>
-                        <tr>
-                            <th>search by name</th>
-                            <td>29+ secs</td>
-                            <td>less than 1 second</td>
-                            <td>2800 %</td>
-                        </tr>
-                        <tr>
-                            <th>search by order</th>
-                            <td>26+ secs</td>
-                            <td>less than 1 second</td>
-                            <td>2500 %</td>
-                        </tr>
-                    </table>
-                </div>
+            <div class="columns">
+              <div class="card" id="card1">
+                <img src="/Assets/illustarator1.svg" alt="" />
+                <h3>Trusted By Many</h3>
+                <p>
+                  Our website speed optimization services have been trusted by
+                  numerous clients to increase the performance and loading times
+                  of their websites.
+                </p>
+              </div>
+              <div class="card" id="card2">
+                <img src="/Assets/illustarator2.svg" alt="" />
+                <h3>Serious Speed</h3>
+                <p>
+                  With a team of highly trained and experienced professionals,
+                  we have the knowledge and skills to optimize any website for
+                  optimal speed and performance.
+                </p>
+              </div>
+              <div class="card" id="card3">
+                <img src="/Assets/illustarator3.svg" alt="" />
+                <h3>Friendly Support</h3>
+                <p>
+                  Have questions? Send a message to our member in the about us
+                  page. Or email your detailed query for fast responses.
+                </p>
+              </div>
             </div>
-        </section>
-        <!----------- SECTION-2 ENDS------------- -->
-
-        <!----------- SECTION-3 STARTS------------- -->
-        <section class="section1 section3">
-            <div class="container">
-                <div class="column flex-column">
-                    <div class="columns">
-                        <h2>How can we help you?</h2>
-                        <p>
-                            Our team of experts works closely with you to understand your
-                            goals and challenges, and develops <br />
-                            a customized plan to help you reach them.
-                        </p>
-                    </div>
-
-                    <div class="columns">
-                        <div class="card" id="card1">
-                            <h4>Test your <span>site speed</span></h4>
-                            <p>
-                                Get detailed insights & recommendations on your site speed,
-                                for free, in under 60 seconds with our nextgen site speed test
-                                tool, SiteSpeedBot
-                            </p>
-                            <a href=""><button class="btn-1">
-                                    <span>Test my site</span>
-                                    <span><img src="/Assets/buttonArrow.svg" alt="" /></span></button></a>
-                        </div>
-                        <div class="card" id="card2">
-                            <h4>Get a <span>FREE</span> site speed audit</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                                vulputate libero et velit interdum, ac aliquet odio mattis.
-                                Class aptent taciti sociosqu ad litora.
-                            </p>
-                            <a href=""><button class="btn-1">
-                                    <span>Test my site</span>
-                                    <span><img src="/Assets/buttonArrow.svg" alt="" /></span></button></a>
-                        </div>
-                        <div class="card" id="card3">
-                            <h4>The <span>FASTEST</span> Wordpress hosting</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                                vulputate libero et velit interdum, ac aliquet odio mattis.
-                                Class aptent taciti sociosqu ad litora.
-                            </p>
-                            <a href=""><button class="btn-1">
-                                    <span>Test my site</span>
-                                    <span><img src="/Assets/buttonArrow.svg" alt="" /></span></button></a>
-                        </div>
-                    </div>
-                </div>
+            <div class="columns">
+              <h3>
+                Find out why so many businesses trust
+                <span>LightningWoo</span> to protect <br />
+                and promote their website, making it unique.
+              </h3>
+              <a href=""
+                ><button class="btn-1">
+                  <span>Learn More</span>
+                  <span
+                    ><img src="/Assets/buttonArrow.svg" alt=""
+                  /></span></button
+              ></a>
             </div>
-        </section>
-        <!----------- SECTION-3 ENDS------------- -->
+          </div>
+        </div>
+      </section>
+      <!----------- SECTION-1 ENDS------------- -->
 
-
-        <!----------- SECTION-4 STARTS------------- -->
-        <section class="section4" id="testimonials">
-            <div class="container">
-                <div class="testimonials">
-                    <h1>See what others are saying</h1>
-                    <div class="columns">
-                        <div class="column" id="column1">
-                            <div class="card">
-                                <div class="stars">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
-                                    velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora
-                                    torquent per conubia nostra, per inceptos himenaeos.</p>
-                                <div class="client">
-                                    <img src="/Assets/reviewProfile1.svg" alt="">
-                                    <div class="client-info">
-                                        <span>Name</span> <br>
-                                        <span>CEO, Founder</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="stars">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
-                                    velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora
-                                    torquent per conubia nostra, per inceptos himenaeos.</p>
-                                <div class="client">
-                                    <img src="/Assets/reviewProfile1.svg" alt="">
-                                    <div class="client-info">
-                                        <span>Name</span> <br>
-                                        <span>CEO, Founder</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column" id="column2">
-                            <div class="card">
-                                <div class="stars">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                </div>
-                                <p>With a team of highly trained and experienced professionals, we have the knowledge
-                                    and skills to optimize any website for optimal speed and performance.</p>
-                                <div class="client">
-                                    <img src="/Assets/reviewProfile1.svg" alt="">
-                                    <div class="client-info">
-                                        <span>Name</span> <br>
-                                        <span>CEO, Founder</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="stars">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
-                                    velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora
-                                    torquent per conubia nostra, per inceptos himenaeos.</p>
-                                <div class="client">
-                                    <img src="/Assets/reviewProfile1.svg" alt="">
-                                    <div class="client-info">
-                                        <span>Name</span> <br>
-                                        <span>CEO, Founder</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="stars">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <div class="client">
-                                    <img src="/Assets/reviewProfile1.svg" alt="">
-                                    <div class="client-info">
-                                        <span>Name</span> <br>
-                                        <span>CEO, Founder</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column" id="column3">
-                            <div class="card">
-                                <div class="stars">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
-                                    velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora
-                                    torquent per conubia nostra, per inceptos himenaeos.</p>
-                                <div class="client">
-                                    <img src="/Assets/reviewProfile1.svg" alt="">
-                                    <div class="client-info">
-                                        <span>Name</span> <br>
-                                        <span>CEO, Founder</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="stars">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                    <img src="/Assets/starIcon.svg" alt="">
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
-                                    velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora
-                                    torquent per conubia nostra, per inceptos himenaeos.</p>
-                                <div class="client">
-                                    <img src="/Assets/reviewProfile1.svg" alt="">
-                                    <div class="client-info">
-                                        <span>Name</span> <br>
-                                        <span>CEO, Founder</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <!----------- SECTION-2 STARTS------------- -->
+      <section class="section2">
+        <div class="container">
+          <div class="features">
+            <h1>How Much <span>Faster</span> it is?</h1>
+            <div class="percentage">
+              <div class="faster p1">
+                <h3>100%</h3>
+                <span>Faster to search for an order</span>
+              </div>
+              <div class="faster p2">
+                <h3>100%</h3>
+                <span>Faster to open an order detail screen</span>
+              </div>
             </div>
-        </section>
-        <!----------- SECTION-4 ENDS------------- -->
+            <table class="gradient-table">
+              <tr>
+                <th>use case</th>
+                <th>before</th>
+                <th>after</th>
+                <th>faster %</th>
+              </tr>
+              <tr>
+                <th>order list screen</th>
+                <td>24+ secs</td>
+                <td>less than i second</td>
+                <td>2600 %</td>
+              </tr>
+              <tr>
+                <th>order detail</th>
+                <td>32+ secs</td>
+                <td>0.64 seconds</td>
+                <td>4200 %</td>
+              </tr>
+              <tr>
+                <th>search by email</th>
+                <td>80+ secs</td>
+                <td>less than 1 second</td>
+                <td>7900 %</td>
+              </tr>
+              <tr>
+                <th>search by name</th>
+                <td>29+ secs</td>
+                <td>less than 1 second</td>
+                <td>2800 %</td>
+              </tr>
+              <tr>
+                <th>search by order</th>
+                <td>26+ secs</td>
+                <td>less than 1 second</td>
+                <td>2500 %</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!----------- SECTION-2 ENDS------------- -->
 
-
-
-        <!----------- SECTION-5 STARTS------------- -->
-        <section class="section5" id="pricing">
-            <div class="container">
-                <div class="our-plans">
-                    <h1>Select a curated plan</h1>
-                    <div class="free-analysis">
-                        <div class="card">
-                            <h3>Free</h3>
-                            <p>Our Free Plan for Speed Optimization is the perfect solution for anyone looking to
-                                analyis the loading time <br>
-                                of their website without spending a dime.</p>
-                            <div class="input-url">
-                                <input type="text" placeholder="Your website...">
-                                <a href=""><button class="btn-1">
-                                        <span>Free Analysis</span>
-                                        <span><img src="/Assets/buttonArrow.svg" alt="" /></span></button></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="select-plans">
-                       <div class="card">
-                        <h3>Lite</h3>
-                        <h1>20$</h1>
-                          <div class="plan-specs">
-                            <span>Loading time 1-6 Sec.</span>
-                            <span>PageSpeed Insights</span>
-                            <span>Browser Caching</span>
-                            <span>Image Compression</span>
-                            <span class="notInPlan">Code Minification</span>
-                            <span class="notInPlan">Database Optimization</span>
-                          </div>
-                          <a href=""><button class="btn-1">
-                            <span>Choose</span>
-                            <span><img src="/Assets/buttonArrow.svg" alt="" /></span></button></a>
-                       </div>
-                       <div class="card">
-                        <h3>Pro</h3>
-                        <h1>49$</h1>
-                          <div class="plan-specs">
-                            <span>Loading time 1-6 Sec.</span>
-                            <span>PageSpeed Insights</span>
-                            <span>Browser Caching</span>
-                            <span>Image Compression</span>
-                            <span>Code Minification</span>
-                            <span class="notInPlan">Database Optimization</span>
-                          </div>
-                          <a href=""><button class="btn-1">
-                            <span>Choose</span>
-                            <span><img src="/Assets/buttonArrow.svg" alt="" /></span></button></a>
-                       </div>
-                       <div class="card">
-                        <h3>Ultimate</h3>
-                        <h1>99$</h1>
-                          <div class="plan-specs">
-                            <span>Loading time 1-6 Sec.</span>
-                            <span>PageSpeed Insights</span>
-                            <span>Browser Caching</span>
-                            <span>Image Compression</span>
-                            <span>Code Minification</span>
-                            <span>Database Optimization</span>
-                          </div>
-                          <a href=""><button class="btn-1">
-                            <span>Choose</span>
-                            <span><img src="/Assets/buttonArrow.svg" alt="" /></span></button></a>
-                       </div>
-                    </div>
-                </div>
+      <!----------- SECTION-3 STARTS------------- -->
+      <section class="section1 section3">
+        <div class="container">
+          <div class="column flex-column">
+            <div class="columns">
+              <h2>How can we help you?</h2>
+              <p>
+                Our team of experts works closely with you to understand your
+                goals and challenges, and develops <br />
+                a customized plan to help you reach them.
+              </p>
             </div>
-        </section>
-        <!----------- SECTION-5 ENDS------------- -->
 
-
-
-        <!----------- SECTION-6 STARTS------------- -->
-        <section class="section6" id="faq">
-            <div class="container">
-                <div class="faq">
-                   <div class="f-left">
-                    <h1>Frequently Asked Questions</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                   </div>
-                   <div class="f-right accordion">
-                    <div class="tab" id="tab1">
-                      <h3>How lightning Works? <i class="fa-sharp fa-light fa-plus" id="plus"></i></h3>
-                      <div class="content">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. </p>
-                      </div>
-                    </div>
-                    <div class="tab" id="tab2">
-                      <h3>Why is website speed important?<i class="fa-sharp fa-light fa-plus" id="plus"></i></h3>
-                      <div class="content">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. </p>
-                      </div>
-                    </div>
-                    <div class="tab" id="tab3">
-                      <h3>How does the speed optimization service work?<i class="fa-sharp fa-light fa-plus" id="plus"></i></h3>
-                      <div class="content">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. </p>
-                      </div>
-                    </div>
-                    <div class="tab" id="tab4">
-                      <h3>Is my data secured ?<i class="fa-sharp fa-light fa-plus" id="plus"></i></h3>
-                      <div class="content">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. </p>
-                      </div>
-                    </div>
-                   </div>
-                </div>
+            <div class="columns">
+              <div class="card" id="card1">
+                <h4>Test your <span>site speed</span></h4>
+                <p>
+                  Get detailed insights & recommendations on your site speed,
+                  for free, in under 60 seconds with our nextgen site speed test
+                  tool, SiteSpeedBot
+                </p>
+                <a href=""
+                  ><button class="btn-1">
+                    <span>Test my site</span>
+                    <span
+                      ><img src="/Assets/buttonArrow.svg" alt=""
+                    /></span></button
+                ></a>
+              </div>
+              <div class="card" id="card2">
+                <h4>Get a <span>FREE</span> site speed audit</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet odio mattis.
+                  Class aptent taciti sociosqu ad litora.
+                </p>
+                <a href=""
+                  ><button class="btn-1">
+                    <span>Test my site</span>
+                    <span
+                      ><img src="/Assets/buttonArrow.svg" alt=""
+                    /></span></button
+                ></a>
+              </div>
+              <div class="card" id="card3">
+                <h4>The <span>FASTEST</span> Wordpress hosting</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet odio mattis.
+                  Class aptent taciti sociosqu ad litora.
+                </p>
+                <a href=""
+                  ><button class="btn-1">
+                    <span>Test my site</span>
+                    <span
+                      ><img src="/Assets/buttonArrow.svg" alt=""
+                    /></span></button
+                ></a>
+              </div>
             </div>
-        </section>
-        <!----------- SECTION-6 ENDS------------- -->
+          </div>
+        </div>
+      </section>
+      <!----------- SECTION-3 ENDS------------- -->
 
-
-        <!----------- SECTION-7 ENDS------------- -->
-        <section class="section7">
-            <div class="container">
-                <div class="fix">
-                    <div class="fix-left">
-                        <h2>We are here to fix your <span>loading time.!</span> </h2>
-                    <p>By optimizing various elements such as images, scripts, and database queries, we can significantly reduce the time it takes for your website to load for your users. This not only leads to a better user experience, but it can also improve your website's search engine rankings.</p>
-                    <a href=""><button class="btn-1">
-                        <span>Request a fix</span>
-                        <span><img src="/Assets/buttonArrow.svg" alt="" /></span></button></a>
+      <!----------- SECTION-4 STARTS------------- -->
+      <section class="section4" id="testimonials">
+        <div class="container">
+          <div class="testimonials">
+            <h1>See what others are saying</h1>
+            <div class="columns">
+              <div class="column" id="column1">
+                <div class="card">
+                  <div class="stars">
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                    mattis. Class aptent taciti sociosqu ad litora torquent per
+                    conubia nostra, per inceptos himenaeos.
+                  </p>
+                  <div class="client">
+                    <img src="/Assets/reviewProfile1.svg" alt="" />
+                    <div class="client-info">
+                      <span>Name</span> <br />
+                      <span>CEO, Founder</span>
                     </div>
-                    
-                        <div class="fix-right">
-                            <img src="/Assets/mainIllustrator1.svg" alt="">
-                        </div>
-                    </div>
-                    
+                  </div>
                 </div>
-            </section>
-            <!----------- SECTION-7 ENDS------------- -->
-
-
-
-
-            <!----------- SECTION-8 STARTS------------- -->
-            <section class="section8">
-                <div class="container">
-                    <div class="fix-request">
-                        <div class="heading">
-                            <h2>Request a Fix..! <hr></h2>
-                            <p>Which Woo Commerce Speed Issue?</p>
-                        </div>
-                           <div class="columns grid-row">
-                            <div class="card" id="card1">Slow Admin Order Search</div>
-                            <div class="card" id="card2">Slow add to cart</div>
-                            <div class="card" id="card3">Slow Checkout</div>
-                            <div class="card" id="card4">Slow Woo Commerce in General</div>
-                            <div class="card" id="card5">
-                                <select id="situation">
-                                    <option disabled selected value="">How Critical Is this?</option>
-                                    <option value="low">Low</option>
-                                    <option value="medium">Medium</option>
-                                    <option value="high">High</option>
-                                    <option value="critical">Critical</option>
-                                    <option value="emergency">Emergency</option>
-                                  </select>
-                                </div>
-                            <div class="card" id="card6">Website / URL</div>
-                           </div>
-                           
-                           <div class="addInfo">
-                            <div class="card" id="card7">
-                                <input type="email" placeholder="Email address">
-                            </div>
-                            <div class="card" id="card8">
-                                 <textarea name="" id="" placeholder="Additional Information you want to provide..."></textarea></div>
-                           </div>
-                           <a href=""><button class="btn-1">
-                            <span>Get a Quote</span>
-                            <span><img src="/Assets/buttonArrow.svg" alt="" /></span></button></a>
+                <div class="card">
+                  <div class="stars">
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                    mattis. Class aptent taciti sociosqu ad litora torquent per
+                    conubia nostra, per inceptos himenaeos.
+                  </p>
+                  <div class="client">
+                    <img src="/Assets/reviewProfile1.svg" alt="" />
+                    <div class="client-info">
+                      <span>Name</span> <br />
+                      <span>CEO, Founder</span>
                     </div>
+                  </div>
                 </div>
-            </section>
-            <!----------- SECTION-8 ENDS------------- -->
-        </main>
-
-        <!-- ---------------FOOTER STARTS=---------- -->
-        <footer>
-            <div class="container">
-                <div class="footLinks">
-                    <div class="wrapper">
-                        <div class="foot-left">
-                            <div class="logo">
-                                <a href="/index.html"><img src="/Assets/logo1.svg" alt="" /></a>
-                                <a href="/index.html"><img src="/Assets/logo1-1.svg" alt="" /></a>
-                            </div>
-                            <div class="social">
-                                <a href=""> <i class="fa-brands fa-twitter"></i> </a>
-                                <a href=""> <i class="fa-brands fa-facebook-f"></i> </a>
-                                <a href=""> <i class="fa-brands fa-linkedin-in"></i> </a>
-                            </div>
-                        </div>
-                        <nav>
-                            <ul class="navLinks">
-                                <li><a href="">About Us</a></li>
-                                <li><a href="">Pricing</a></li>
-                                <li><a href="">FAQ's</a></li>
-                                <li><a href="">Testimonials</a></li>
-                            </ul>
-                        </nav>
+              </div>
+              <div class="column" id="column2">
+                <div class="card">
+                  <div class="stars">
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                  </div>
+                  <p>
+                    With a team of highly trained and experienced professionals,
+                    we have the knowledge and skills to optimize any website for
+                    optimal speed and performance.
+                  </p>
+                  <div class="client">
+                    <img src="/Assets/reviewProfile1.svg" alt="" />
+                    <div class="client-info">
+                      <span>Name</span> <br />
+                      <span>CEO, Founder</span>
                     </div>
-                    <hr>
-
-                    <div class="terms-conditions">
-                        <div class="c-left">
-                            <ul>
-                                <li><a href="">Terms of use</a></li>
-                                <li><a href="">Style guide</a></li>
-                                <li><a href="">Licence</a></li>
-                                <li><a href="">Instructions</a></li>
-                            </ul>
-                        </div>
-                        <div class="c-right">
-                          <span>2023 LightningWoo. All rights reserve</span>
-                          <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
-                        </div>
-                    </div>
+                  </div>
                 </div>
+                <div class="card">
+                  <div class="stars">
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                    mattis. Class aptent taciti sociosqu ad litora torquent per
+                    conubia nostra, per inceptos himenaeos.
+                  </p>
+                  <div class="client">
+                    <img src="/Assets/reviewProfile1.svg" alt="" />
+                    <div class="client-info">
+                      <span>Name</span> <br />
+                      <span>CEO, Founder</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="stars">
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                  <div class="client">
+                    <img src="/Assets/reviewProfile1.svg" alt="" />
+                    <div class="client-info">
+                      <span>Name</span> <br />
+                      <span>CEO, Founder</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column" id="column3">
+                <div class="card">
+                  <div class="stars">
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                    mattis. Class aptent taciti sociosqu ad litora torquent per
+                    conubia nostra, per inceptos himenaeos.
+                  </p>
+                  <div class="client">
+                    <img src="/Assets/reviewProfile1.svg" alt="" />
+                    <div class="client-info">
+                      <span>Name</span> <br />
+                      <span>CEO, Founder</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="stars">
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                    <img src="/Assets/starIcon.svg" alt="" />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                    mattis. Class aptent taciti sociosqu ad litora torquent per
+                    conubia nostra, per inceptos himenaeos.
+                  </p>
+                  <div class="client">
+                    <img src="/Assets/reviewProfile1.svg" alt="" />
+                    <div class="client-info">
+                      <span>Name</span> <br />
+                      <span>CEO, Founder</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </footer>
-        <!-- ---------------FOOTER ENDS=---------- -->
+          </div>
+        </div>
+      </section>
+      <!----------- SECTION-4 ENDS------------- -->
+
+      <!----------- SECTION-5 STARTS------------- -->
+      <section class="section5" id="pricing">
+        <div class="container">
+          <div class="our-plans">
+            <h1>Select a curated plan</h1>
+            <div class="free-analysis">
+              <div class="card">
+                <h3>Free</h3>
+                <p>
+                  Our Free Plan for Speed Optimization is the perfect solution
+                  for anyone looking to analyis the loading time <br />
+                  of their website without spending a dime.
+                </p>
+                <div class="input-url">
+                  <input type="text" placeholder="Your website..." />
+                  <a href=""
+                    ><button class="btn-1">
+                      <span>Free Analysis</span>
+                      <span
+                        ><img src="/Assets/buttonArrow.svg" alt=""
+                      /></span></button
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="select-plans">
+              <div class="card">
+                <h3>Lite</h3>
+                <h1>20$</h1>
+                <div class="plan-specs">
+                  <span>Loading time 1-6 Sec.</span>
+                  <span>PageSpeed Insights</span>
+                  <span>Browser Caching</span>
+                  <span>Image Compression</span>
+                  <span class="notInPlan">Code Minification</span>
+                  <span class="notInPlan">Database Optimization</span>
+                </div>
+                <a href=""
+                  ><button class="btn-1">
+                    <span>Choose</span>
+                    <span
+                      ><img src="/Assets/buttonArrow.svg" alt=""
+                    /></span></button
+                ></a>
+              </div>
+              <div class="card">
+                <h3>Pro</h3>
+                <h1>49$</h1>
+                <div class="plan-specs">
+                  <span>Loading time 1-6 Sec.</span>
+                  <span>PageSpeed Insights</span>
+                  <span>Browser Caching</span>
+                  <span>Image Compression</span>
+                  <span>Code Minification</span>
+                  <span class="notInPlan">Database Optimization</span>
+                </div>
+                <a href=""
+                  ><button class="btn-1">
+                    <span>Choose</span>
+                    <span
+                      ><img src="/Assets/buttonArrow.svg" alt=""
+                    /></span></button
+                ></a>
+              </div>
+              <div class="card">
+                <h3>Ultimate</h3>
+                <h1>99$</h1>
+                <div class="plan-specs">
+                  <span>Loading time 1-6 Sec.</span>
+                  <span>PageSpeed Insights</span>
+                  <span>Browser Caching</span>
+                  <span>Image Compression</span>
+                  <span>Code Minification</span>
+                  <span>Database Optimization</span>
+                </div>
+                <a href=""
+                  ><button class="btn-1">
+                    <span>Choose</span>
+                    <span
+                      ><img src="/Assets/buttonArrow.svg" alt=""
+                    /></span></button
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!----------- SECTION-5 ENDS------------- -->
+
+      <!----------- SECTION-6 STARTS------------- -->
+      <section class="section6" id="faq">
+        <div class="container">
+          <div class="faq">
+            <div class="f-left">
+              <h1>Frequently Asked Questions</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                vulputate libero et velit interdum, ac aliquet odio mattis.
+                Class aptent taciti sociosqu ad litora torquent per conubia
+                nostra, per inceptos himenaeos.
+              </p>
+            </div>
+            <div class="f-right accordion">
+              <div class="tab" id="tab1">
+                <h3>
+                  How lightning Works?
+                  <i class="fa-sharp fa-light fa-plus" id="plus"></i>
+                </h3>
+                <div class="content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique. Duis
+                    cursus, mi quis viverra ornare, eros dolor interdum nulla,
+                    ut commodo diam libero vitae erat.
+                  </p>
+                </div>
+              </div>
+              <div class="tab" id="tab2">
+                <h3>
+                  Why is website speed important?<i
+                    class="fa-sharp fa-light fa-plus"
+                    id="plus"
+                  ></i>
+                </h3>
+                <div class="content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique. Duis
+                    cursus, mi quis viverra ornare, eros dolor interdum nulla,
+                    ut commodo diam libero vitae erat.
+                  </p>
+                </div>
+              </div>
+              <div class="tab" id="tab3">
+                <h3>
+                  How does the speed optimization service work?<i
+                    class="fa-sharp fa-light fa-plus"
+                    id="plus"
+                  ></i>
+                </h3>
+                <div class="content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique. Duis
+                    cursus, mi quis viverra ornare, eros dolor interdum nulla,
+                    ut commodo diam libero vitae erat.
+                  </p>
+                </div>
+              </div>
+              <div class="tab" id="tab4">
+                <h3>
+                  Is my data secured ?<i
+                    class="fa-sharp fa-light fa-plus"
+                    id="plus"
+                  ></i>
+                </h3>
+                <div class="content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique. Duis
+                    cursus, mi quis viverra ornare, eros dolor interdum nulla,
+                    ut commodo diam libero vitae erat.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!----------- SECTION-6 ENDS------------- -->
+
+      <!----------- SECTION-7 ENDS------------- -->
+      <section class="section7">
+        <div class="container">
+          <div class="fix">
+            <div class="fix-left">
+              <h2>We are here to fix your <span>loading time.!</span></h2>
+              <p>
+                By optimizing various elements such as images, scripts, and
+                database queries, we can significantly reduce the time it takes
+                for your website to load for your users. This not only leads to
+                a better user experience, but it can also improve your website's
+                search engine rankings.
+              </p>
+              <a href=""
+                ><button class="btn-1">
+                  <span>Request a fix</span>
+                  <span
+                    ><img src="/Assets/buttonArrow.svg" alt=""
+                  /></span></button
+              ></a>
+            </div>
+
+            <div class="fix-right">
+              <img src="/Assets/mainIllustrator1.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!----------- SECTION-7 ENDS------------- -->
+
+      <!----------- SECTION-8 STARTS------------- -->
+      <section class="section8">
+        <div class="container">
+          <div class="fix-request">
+            <div class="heading">
+              <h2>
+                Request a Fix..!
+                <hr />
+              </h2>
+              <p>Which Woo Commerce Speed Issue?</p>
+            </div>
+            <div class="columns grid-row">
+              <div class="card" id="card1">Slow Admin Order Search</div>
+              <div class="card" id="card2">Slow add to cart</div>
+              <div class="card" id="card3">Slow Checkout</div>
+              <div class="card" id="card4">Slow Woo Commerce in General</div>
+              <div class="card" id="card5">
+                <select id="situation">
+                  <option disabled selected value="">
+                    How Critical Is this?
+                  </option>
+                  <option value="low">Low</option>
+                  <option value="medium">Medium</option>
+                  <option value="high">High</option>
+                  <option value="critical">Critical</option>
+                  <option value="emergency">Emergency</option>
+                </select>
+              </div>
+              <div class="card" id="card6">
+                <input type="text" placeholder="Website / URL" />
+              </div>
+            </div>
+
+            <div class="addInfo">
+              <div class="card" id="card7">
+                <input type="email" placeholder="Email address" />
+              </div>
+              <div class="card" id="card8">
+                <textarea
+                  name=""
+                  id=""
+                  placeholder="Additional Information you want to provide..."
+                ></textarea>
+              </div>
+            </div>
+            <a href=""
+              ><button class="btn-1">
+                <span>Get a Quote</span>
+                <span
+                  ><img src="/Assets/buttonArrow.svg" alt=""
+                /></span></button
+            ></a>
+          </div>
+        </div>
+      </section>
+      <!----------- SECTION-8 ENDS------------- -->
+    </main>
+
+    <!-- ---------------FOOTER STARTS=---------- -->
+    <footer>
+      <div class="container">
+        <div class="footLinks">
+          <div class="wrapper">
+            <div class="foot-left">
+              <div class="logo">
+                <a href="/index.html"><img src="/Assets/logo1.svg" alt="" /></a>
+                <a href="/index.html"
+                  ><img src="/Assets/logo1-1.svg" alt=""
+                /></a>
+              </div>
+              <div class="social">
+                <a href=""> <i class="fa-brands fa-twitter"></i> </a>
+                <a href=""> <i class="fa-brands fa-facebook-f"></i> </a>
+                <a href=""> <i class="fa-brands fa-linkedin-in"></i> </a>
+              </div>
+            </div>
+            <nav>
+              <ul class="navLinks">
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#faq">FAQ's</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+              </ul>
+            </nav>
+          </div>
+          <hr />
+
+          <div class="terms-conditions">
+            <div class="c-left">
+              <ul>
+                <li><a href="">Terms of use</a></li>
+                <li><a href="">Style guide</a></li>
+                <li><a href="">Licence</a></li>
+                <li><a href="">Instructions</a></li>
+              </ul>
+            </div>
+            <div class="c-right">
+              <span>2023 LightningWoo. All rights reserve</span>
+              <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ---------------FOOTER ENDS=---------- -->
 
     <script src="/main.js"></script>
-</body>
-
+  </body>
 </html>

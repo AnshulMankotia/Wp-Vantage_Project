@@ -1,411 +1,423 @@
-@media (min-width:320px) and (max-width:960px){
-    /* For header */
-    h1{
-        font-size: 3rem;
-    }
-    header{
-        position: relative;
-        background-position-x: 32%;
-        min-height: 85vh;
-    }
-    
-    header .container {
-        padding: 3rem 2rem;
-    }
-    .deskNav, #desk-login{
-        display: none;
-    }
-    .heroSection .logIn-2 {
-        flex-direction: column;
-    }
-    .mobile-menu{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 0%;
-        right: 0%;
-        background-color:var(--white-clr);
-        min-height:100vh;
-        padding: 3rem 0;
-        gap:5rem;
-        width: 50%;
-        align-items: center;
-        transform: translateX(75%);
-        background: transparent;
-        transition: .3s ease-in;
-    }
-    .mobile-menu.active{
-        transform: translateX(0);
-        background-color: white;
-    }
-    .mobile-menu .navLinks{
-        align-items: center;
-        width: 100%;
-    }
-    .mobile-menu .navLinks {
-        width: 85%;
-    }
-    .mobile-menu #mobile-login {
-        flex-direction: column;
-    }
-    .mobile-menu ul{
-        flex-direction: column;
-
-    }
-    .mobile-menu #mobile-login{
-        display: flex;
-        width: 100%;
-    }
-    .mobile-menu .mobNav{
-        display: flex;
-        width: 100%;
-        padding: 0 2rem;
-    }
-    .navIcon{
-        display: flex;
-        flex-direction: column;
-        gap: 0.3rem;
-        cursor: pointer;
-    }
-    
-    .navIcon .first-line,
-    .second-line,
-    .third-line{
+@media (min-width: 320px) and (max-width: 960px) {
+  /* For header */
+  h1 {
+    font-size: 3rem;
+  }
+  header {
     position: relative;
-     width: 30px;
-     height: 3px;
-     background:var(--off-black-clr);
-     display: inline-block;
-     border-radius: 10px;
-     transition-duration: 0.5s;
-    }
-    
-    .navIcon.active .first-line{
-        transform: rotate(45deg);
-        top: 3.5%;
-    }
-    .navIcon.active .second-line{
-        transform: rotate(-45deg);
-    }
-    .navIcon.active .third-line{
-        transform: rotate(-136deg);
-        top: -8px;
-    }
-    /* //For header */
+    background-position-x: 32%;
+    min-height: 100vh;
+  }
 
-    /* For Section1 */
-    .section1 .columns:nth-of-type(2) {
-        gap: 1rem;
-    }
-    .section1 .columns:nth-of-type(2) .card {
-        flex: 1;
-        height: 25rem;
-        padding:1rem;
-        gap: 1rem;
-    }
-    .section1 .columns:nth-of-type(2) .card h3 {
-        font-size: 1.5rem;
-    }
-    .section1 .columns:nth-of-type(2) .card p {
-        font-size: 0.875rem;
-    }
-    .section1 .columns:nth-of-type(1) h1 {
-        font-size: 2.125rem;
-        font-family: var(--secondary-font-family);
-        font-weight: 400;
-        margin-bottom: 1.5rem;
-    }
-    .section1 .columns:nth-of-type(1) p {
-        font-size: 1rem;
-    }
-    .section1 .columns:nth-of-type(1) h2 {
-        font-size: 2.125rem;
-    }
-    .section1 .columns:nth-of-type(3) h3 {
-        font-size: 1.4rem;
-    }
-    /* //For Section1 */
+  header .container {
+    padding: 2rem 2rem;
+  }
+  .deskNav,
+  #desk-login {
+    display: none;
+  }
+  .heroSection .logIn-2 {
+    flex-direction: column;
+  }
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 100;
+    top: 0%;
+    right: 0%;
+    background-color: var(--white-clr);
+    min-height: 100vh;
+    padding: 2rem 0;
+    gap: 5rem;
+    width: 50%;
+    align-items: center;
+    transform: translateX(75%);
+    background: transparent;
+    transition: 0.3s ease-in;
+  }
+  .mobile-menu.active {
+    transform: translateX(0);
+    background-color: white;
+    box-shadow: 0px 0px 22px 2px #312f2f;
+  }
+  .mobile-menu .navLinks {
+    align-items: center;
+    width: 100%;
+  }
+  .mobile-menu .navLinks {
+    width: 85%;
+  }
+  .mobile-menu #mobile-login {
+    flex-direction: column;
+  }
+  .mobile-menu ul {
+    flex-direction: column;
+  }
+  .mobile-menu #mobile-login {
+    display: flex;
+    width: 100%;
+  }
+  .mobile-menu .mobNav {
+    display: flex;
+    width: 100%;
+    padding: 0 2rem;
+  }
+  .navIcon {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    cursor: pointer;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as desired */
+    z-index: 98; /* Make sure the overlay is above other elements */
+    display: none; /* Initially hide the overlay */
+  }
+  .overlay.active {
+    display: block; /* Show the overlay when it has the "active" class */
+  }
+  .navIcon .first-line,
+  .second-line,
+  .third-line {
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background: var(--off-black-clr);
+    display: inline-block;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+  }
 
+  .navIcon.active .first-line {
+    transform: rotate(45deg);
+    top: 3.5%;
+  }
+  .navIcon.active .second-line {
+    transform: rotate(-45deg);
+  }
+  .navIcon.active .third-line {
+    transform: rotate(-136deg);
+    top: -8px;
+  }
+  /* //For header */
 
-    /* //For Section-2 */
-    .section2 .container {
-        min-height: 100vh;
-    }
-    .section2 .features .percentage {
-        gap: 1rem;
-    }
-    /* //For Section-2 */
+  /* For Section1 */
+  .section1 .columns:nth-of-type(2) {
+    gap: 1rem;
+  }
+  .section1 .columns:nth-of-type(2) .card {
+    flex: 1;
+    height: 25rem;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .section1 .columns:nth-of-type(2) .card h3 {
+    font-size: 1.5rem;
+  }
+  .section1 .columns:nth-of-type(2) .card p {
+    font-size: 0.875rem;
+  }
+  .section1 .columns:nth-of-type(1) h1 {
+    font-size: 2.125rem;
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+  }
+  .section1 .columns:nth-of-type(1) p {
+    font-size: 1rem;
+  }
+  .section1 .columns:nth-of-type(1) h2 {
+    font-size: 2.125rem;
+  }
+  .section1 .columns:nth-of-type(3) h3 {
+    font-size: 1.4rem;
+  }
+  /* //For Section1 */
 
+  /* //For Section-2 */
+  .section2 .container {
+    min-height: 100vh;
+  }
+  .section2 .features .percentage {
+    gap: 1rem;
+  }
+  /* //For Section-2 */
 
-    /* For section-3 */
-    .section3 .columns:nth-of-type(2) .card {
-        height: 17rem;
-    }
-    /* //For section-3 */
+  /* For section-3 */
+  .section3 .columns:nth-of-type(2) .card {
+    height: 17rem;
+  }
+  /* //For section-3 */
 
-    /* For section-4 */
-    .testimonials .column {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-    }
-    .testimonials .columns{
-        overflow-x: scroll;
-    } 
-    .testimonials .card {
-        width: 20rem;
-    }
-    /* //For section-4 */
+  /* For section-4 */
+  .testimonials .column {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .testimonials .columns {
+    overflow-x: scroll;
+  }
+  .testimonials .card {
+    width: 20rem;
+  }
+  /* //For section-4 */
 
-    /* For section-5 */
-    .section5 .container {
-        min-height: 100vh;
-    }
-    /* //For section-5 */
+  /* For section-5 */
+  .section5 .container {
+    min-height: 100vh;
+  }
+  /* //For section-5 */
 
+  /* For section-6 */
+  .section6 .faq .f-left {
+    width: 100%;
+  }
+  .section6 .faq .f-right {
+    width: 100%;
+  }
+  .section6 .faq {
+    flex-direction: column;
+  }
+  .section6 .accordion h3 {
+    font-size: 0.875rem;
+  }
+  /* For section-6 */
 
-    /* For section-6 */
-    .section6 .faq .f-left{
-        width: 100%;
-      }
-      .section6 .faq .f-right{
-        width: 100%;
-      }
-      .section6 .faq {
-        flex-direction: column;
-    }
-    .section6 .accordion h3 {
-        font-size: 0.875rem;
-    }
-    /* For section-6 */
+  /* For section-7 */
+  .section7 .fix {
+    flex-direction: column;
+  }
+  .section7 .fix .fix-right {
+    width: 100%;
+  }
+  .section7 .fix .fix-left {
+    width: 100%;
+  }
+  /* For section-7 */
 
+  /* For section-8 */
+  .section8 .fix-request h2 {
+    flex-direction: column;
+    gap: 0rem;
+    padding-bottom: 2rem;
+  }
+  .section8 .fix-request h2 > hr {
+    width: 100%;
+  }
+  .section8 .grid-row {
+    column-gap: 1rem;
+  }
+  /* //For section-8 */
 
-    /* For section-7 */
-    .section7 .fix {
-        flex-direction: column;
-    }
-    .section7 .fix .fix-right{
-        width: 100%;
-    }
-    .section7 .fix .fix-left{
-        width: 100%;
-    }
-    /* For section-7 */
-
-
-    /* For section-8 */
-    .section8 .fix-request h2 {
-        flex-direction: column;
-        gap: 0rem;
-        padding-bottom: 2rem;
-    }
-    .section8 .fix-request h2 > hr {
-        width: 100%;
-    }
-    .section8 .grid-row {
-        column-gap: 1rem;
-    }
-    /* //For section-8 */
-
-    /* Footer styling */
-    .terms-conditions .c-right i {
-        display: none;
-    }
-    footer .container{
-        min-height: 60vh;
-      }
-    /* //Footer styling */
+  /* Footer styling */
+  .terms-conditions .c-right i {
+    display: none;
+  }
+  footer .container {
+    min-height: 60vh;
+  }
+  /* //Footer styling */
 }
 
+@media (min-width: 320px) and (max-width: 490px) {
+  :root {
+    --spacer-section: 3rem;
+    --spacer-section-2: 5rem;
+  }
+  h1 {
+    font-size: 2rem;
+    line-height: 1em;
+  }
+  .btn-1 {
+    padding: 1.5em 4em !important;
+  }
+  .mobile-menu {
+    width: 100%;
+  }
+  .heroSection .mainHeading p {
+    font-size: 0.875rem;
+  }
+  .heroSection {
+    gap: 2rem;
+    justify-content: center;
+    min-height: 70vh;
+  }
+  header .container {
+    padding: 2rem 1rem;
+  }
+  header .logo {
+    width: 40%;
+  }
+  br {
+    display: none;
+  }
+  .btn-1 {
+    font-size: 0.7rem;
+    padding: 1.125em 1em;
+  }
 
-@media (min-width:320px) and (max-width:490px){
-    :root {
-        --spacer-section: 3rem;
-        --spacer-section-2: 5rem;
-    }
-    h1{
-        font-size: 2rem;
-        line-height: 1em;
-    }
-    .btn-1 {
-        padding: 1.5em 4em !important;
-    }
-    .mobile-menu{
-        width: 100%;
-    }
-    .heroSection .mainHeading p {
-        font-size: 0.875rem;
-    }
-    header .container {
-        padding: 2rem 1rem;
-    }
-    header .logo {
-        width: 40%;
-    }
-    br{
-        display: none;
-    }
-    .btn-1 {
-        font-size: 0.7rem;
-        padding: 1.125em 1em;
-       
-    }
+  /* For section1 */
+  .section1 .columns:nth-of-type(2) {
+    flex-direction: column;
+  }
+  /* //For section1 */
 
-    /* For section1 */
-    .section1 .columns:nth-of-type(2) {
-        flex-direction: column;
-    }
-    .mobile-menu{
-        top: -3%;
-    }
-    /* //For section1 */
+  /* For section-2 */
+  .features .percentage h3 {
+    font-size: 3rem;
+  }
+  .gradient-table th {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    background-color: white;
+    padding: 1rem 0;
+  }
+  /* //For section-2 */
 
+  /* For Section-3 */
+  .section3 .columns:nth-of-type(2) .card {
+    padding: 2rem 1rem;
+  }
+  /* //For Section-3 */
 
-    /* For section-2 */
-    .features .percentage h3 {
-        font-size: 3rem;
-    }
-    .gradient-table th {
-        text-transform: uppercase;
-        font-size: 0.75rem;
-        background-color: white;
-        padding: 1rem 0;
-    }    
-    /* //For section-2 */
+  /* For section-4 */
+  .testimonials .card {
+    padding: 2rem 2rem 1rem;
+  }
+  /* //For section-4 */
 
-    /* For Section-3 */
-    .section3 .columns:nth-of-type(2) .card {
-        padding: 2rem 1rem;
-    }
-    /* //For Section-3 */
+  /* For section-5 */
+  .section5 .select-plans {
+    flex-direction: column;
+  }
+  .section5 .free-analysis .input-url {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .section5 .free-analysis .input-url input {
+    width: 80%;
+  }
+  /* For section-5 */
 
-    /* For section-4 */
-    .testimonials .card {
-        padding: 2rem 2rem 1rem;
-    }
-    /* //For section-4 */
+  /* For section-6 */
+  .section6 .faq .f-left h1 {
+    padding-bottom: 2rem;
+  }
+  .section6 .accordion .tab {
+    padding: 1rem 2rem 3rem 2rem;
+  }
+  .section6 .accordion .content p {
+    font-size: 0.875rem;
+  }
+  .section6 .accordion h3 {
+    font-size: 0.875rem;
+    gap: 1rem;
+  }
+  /* For section-6 */
 
+  /* For section-7 */
+  .section7 .container {
+    padding: 2rem 1rem;
+  }
+  .section7 .fix .fix-left h2 {
+    font-size: 2rem;
+  }
+  .section7 .btn-1 {
+    padding: 1.125em 2em;
+    font-size: 1rem;
+  }
+  .section7 .fix .fix-left p {
+    padding: 2rem 0;
+  }
+  .section7 .fix .fix-left p {
+    font-size: 1rem;
+    padding: 2rem 0;
+    letter-spacing: 0;
+  }
+  .section7 .btn-1 {
+    padding: 1rem 2em !important;
+  }
+  /* For section-7 */
 
-    /* For section-5 */
-    .section5 .select-plans {
-        flex-direction: column;
-    }
-    .section5 .free-analysis .input-url {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    .section5 .free-analysis .input-url input {
-        width: 80%;
-    }
-    /* For section-5 */
+  /* For section-8 */
+  .section8 .grid-row .card {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+  }
+  .section8 #card5 select {
+    font-size: 13px;
+    opacity: 0.8;
+  }
+  .section8 .addInfo input,
+  textarea {
+    font-size: 13px;
+  }
+  .section8 #card5 {
+    grid-column: 1/3;
+  }
+  .section8 #card6 {
+    grid-column: 1/3;
+  }
+  /* For section-8 */
 
-
-    /* For section-6 */
-    .section6 .faq .f-left h1 {
-        padding-bottom: 2rem;  
-    }
-    .section6 .accordion .tab {
-        padding: 1rem 2rem 3rem 2rem;
-    }
-    .section6 .accordion .content p{
-        font-size: 0.875rem;
-    }
-    .section6 .accordion h3 {
-        font-size: 0.875rem;
-        gap: 1rem;
-    }
-    /* For section-6 */
-
-
-    /* For section-7 */
-    .section7 .container {
-        padding: 2rem 1rem;
-    }
-    .section7 .fix .fix-left h2 {
-        font-size: 2rem;
-    }
-    .section7 .btn-1 {
-        padding: 1.125em 2em;
-        font-size: 1rem;
-    }
-    .section7 .fix .fix-left p {
-        padding: 2rem 0;
-    }
-    .section7 .fix .fix-left p {
-        font-size: 1rem;
-        padding: 2rem 0;
-        letter-spacing: 0;
-    }
-    .section7 .btn-1 {
-        padding: 1rem 2em !important;
-    }
-    /* For section-7 */
-
-
-    
-    /* For section-8 */
-    .section8 .grid-row .card {
-        font-size: 13px;
-        display: flex;
-       align-items: center;
-       justify-content: center;
-       height: 5rem;
-    }
-    .section8 #card5 select{
-        font-size: 13px;
-        opacity: 0.8;
-    }
-    .section8 .addInfo input, textarea {
-        font-size: 13px;
-    }
-    /* For section-8 */
-
-    /* footer css starts */
-    footer .wrapper {
-        gap: 2rem;
-        flex-direction: column;
-    }
-    .footLinks {
-        gap: 2rem;
-    }
-    .footLinks .foot-left {
-        flex-direction: row;
-        gap: 2rem;;
-        align-items: center;
-    }
-    .terms-conditions .c-left ul {
-        gap: 1rem;
-    }
-    .terms-conditions .c-right span {
-        padding-right: 0rem;
-        font-size: 0.9rem;
-    }
-    .footLinks .social i {
-        font-size: 1rem;
-        padding: 0.9rem;
-        width: 3rem;
-    }
-    footer .social{
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-    footer .terms-conditions {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    .terms-conditions a{
+  /* footer css starts */
+  footer .wrapper {
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .footLinks {
+    gap: 2rem;
+  }
+  .footLinks .foot-left {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+  }
+  .terms-conditions .c-left ul {
+    gap: 1rem;
+  }
+  .terms-conditions .c-right span {
+    padding-right: 0rem;
     font-size: 0.9rem;
-    }
-    footer .navLinks a{
-        font-size: 0.9rem;
-    }
-    footer .navLinks{
-        gap: 2rem;
-    }
-    /* footer css starts */
-    }
+  }
+  .footLinks .social i {
+    font-size: 1rem;
+    padding: 0.9rem;
+    width: 3rem;
+  }
+  footer .social {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  footer .terms-conditions {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .terms-conditions a {
+    font-size: 0.9rem;
+  }
+  footer .navLinks a {
+    font-size: 0.9rem;
+  }
+  footer .navLinks {
+    gap: 2rem;
+  }
+  /* footer css starts */
+}
 
-    
-
-
+@media (min-width: 960px) and (max-width: 1440px) {
+  .footLinks {
+    gap: 2rem;
+  }
+}
